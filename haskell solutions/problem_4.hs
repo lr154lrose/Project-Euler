@@ -1,12 +1,12 @@
 --program finding the biggest palindrome made of the product of 3-digit numbers
 
-is_palindrome:: [Int] -> Bool --this function takes a list of integers and returns True or False whethter it's a list containing a palindrome
+is_palindrome:: [Int] -> Bool --this function takes a list of integers and returns True or False whether it's a list containing a palindrome
 is_palindrome myList = 
     let digits_matching = filter (\x -> myList !! x == reverse(myList) !! x) [0..length myList - 1]
     in if length digits_matching == length myList then True
     else False
     
-int_to_digits_list:: Int -> [Int] --this function as parameter a number and returns a list of its digits 
+int_to_digits_list:: Int -> [Int] --this function takes as parameter a number and returns a list of its digits 
 int_to_digits_list n = 
     let string_list = map (\x -> [] ++ [(show n) !! x]) [0..length (show n) - 1]
     in map read string_list :: [Int]

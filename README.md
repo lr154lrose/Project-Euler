@@ -1,2 +1,4 @@
-# Euler-Project-
-Tackling the these mathematical problems using programming, specifically the function programming language, Haskell.
+# Euler-Project
+Tackling these mathematical problems using Haskell.
+
+Problems can be found at https://projecteuler.net/archives

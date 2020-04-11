@@ -21,7 +21,7 @@ def prime_list(start, end):                 #function taking two numbers as para
 
 def factors(n, prime_numbers):              #function returning a list containing all the prime factors of the number taken as parameter
     factors_list = []                       #creating empty list 
-    for i in prime_numbers:                 #iterating through the list of prime numberss
+    for i in prime_numbers:                 #iterating through the list of prime numbers
         if(n%i == 0 and n/i in prime_numbers): #if both divisors are prime
             factors_list.append(i)          #append both of them 
             factors_list.append(round(n/i))

@@ -21,7 +21,7 @@ primes = f [2..] where f (p : ns) = p : f [n | n <- ns, n `mod` p /= 0]
 counting:: Int -> [Int] -> Int --counting the occurences of an element in a list 
 counting number list = 
   let occurences = filter (\x -> x == number) list
-  in length occurences  
+  in length occurences --returning length of that list  
 
 helper:: [Int] -> [Int] -> [Int] --function taking two lists, the first one containing all the prime factors up to this point 
 helper returnList iteratableList = 

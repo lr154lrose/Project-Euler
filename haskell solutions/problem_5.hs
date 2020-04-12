@@ -1,12 +1,5 @@
 --program finding the smallest common multiple of all the numbers in a given range
 
-is_prime:: Int -> Bool --function finding if a number is prime or not, returning Boolean
-is_prime n = if length (filter (\x -> rem n x == 0) [1..round(sqrt(fromIntegral n))]) == 1 
-    then True 
-    else False
-
-prime_list:: [Int] -> [Int] --function finding the prime numbers in a list of numbers 
-prime_list range_list = filter (\x -> is_prime x == True) range_list --returns a new list containing only the prime numbers
 
 factors:: Int -> [Int] --function getting all the prime factors of a number 
 factors m = f m (head primes) (tail primes) where

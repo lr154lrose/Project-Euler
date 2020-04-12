@@ -1,5 +1,5 @@
 --program finding the smallest common multiple of all the numbers in a given range
-
+--
 
 factors:: Int -> [Int] --function getting all the prime factors of a number 
 factors m = f m (head primes) (tail primes) where

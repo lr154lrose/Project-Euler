@@ -1,4 +1,4 @@
---program returning the difference between the square sum and the sum of squares of the firs n natural numbers
+--program returning the difference between the square sum and the sum of squares of the first n natural numbers
 
 sum_of_squares::Int -> Int
 sum_of_squares n = foldr (\x y -> x*x + y) 0 [1..n]

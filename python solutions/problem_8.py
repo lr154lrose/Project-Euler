@@ -1,4 +1,4 @@
-def largest_product_of_n_numbers(series, number): #function taking as parameteres a sequence and a number n, it returns the largest product of n adjacent elements from the series 
+def largest_product_of_n_numbers(series, number): #function taking as parameters a sequence and a number n, it returns the largest product of n adjacent elements from the series 
     
     largest_product_factors = series_numbers(series, number)
     largest_product = product_of_factors(largest_product_factors)
@@ -8,7 +8,6 @@ def largest_product_of_n_numbers(series, number): #function taking as parametere
             largest_product = product_of_factors(factors)
 
     return largest_product
-
 
 
 def product_of_factors(list_of_factors): #function finding the product of a list of numbers

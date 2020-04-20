@@ -11,8 +11,8 @@ pythagorean_triplet n m number = if (m*m - n*n + 2*m*n + m*m + n*n) == number th
 n_loop:: Int -> [[Int]]
 n_loop number = map (\x -> m_loop x number) [1..ceiling(sqrt(fromIntegral number))]
 
-product_of_triplet::Int -> [[Int]]
-product_of_triplet number = n_loop 1000
+product_of_triplet::Int -> Int
+product_of_triplet number = (filter (\x -> x /= []) (n_loop 1000)) !! 0 !! 0 
 
 main:: IO()
 main = do 

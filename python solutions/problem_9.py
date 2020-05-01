@@ -6,7 +6,7 @@ def pythagorean_triplet(number): #finding a pythagorean triplet where the sum of
             a = m*m - n*n #using the equations for finding pythagorean triple
             b = 2*m*n
             c = m*m + n*n
-            if(a + b + c == 1000):
+            if(a + b + c == number):
                 return a*b*c
 
                                  

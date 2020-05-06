@@ -8,6 +8,7 @@ def main():
     diagonal1_product = find_diagonally1(matrix)
     diagonal2_product = find_diagonally2(matrix)
     print(max(vertical_product, horizontal_product, diagonal1_product, diagonal2_product))
+    print(diagonal1_product)
 
 def find_vertical(matrix):
     max_product = 0

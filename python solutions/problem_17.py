@@ -14,8 +14,6 @@ tens = {0: 0, 20: 6, 30: 6, 40: 5, 50: 5, 60: 5, 70: 7, 80: 6, 90: 6}
 _hundred = 7
 _and = 3
 
-sum_of_letters = 0
-
 def add_up_letters(i, n):
     sum_of_letters = 0
 

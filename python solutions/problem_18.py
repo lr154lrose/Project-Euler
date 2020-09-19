@@ -12,7 +12,7 @@ def maximum_sum(matrix):
         for j in range(len(matrix[i]) - 1):
             matrix[i][j] = int(matrix[i][j]) + max(
                 int(matrix[i + 1][j]), int(matrix[i + 1][j + 1])
-            ) # adding the biggest number
+            )  # adding the biggest number
         matrix.remove(matrix[i + 1])
     return matrix[0][0]
 

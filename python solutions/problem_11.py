@@ -1,5 +1,6 @@
-#program finding the biggest product in a 20x20 grid
-#the result is the product of four adjacent numbers in the same direction, up, down, left, right or diagonally
+# program finding the biggest product in a 20x20 grid
+# the result is the product of four adjacent numbers in the same direction, up, down, left, right or diagonally
+
 
 def main():
     matrix = grid_to_matrix(grid)
@@ -7,49 +8,95 @@ def main():
     horizontal_product = find_horizontal(matrix)
     diagonal1_product = find_diagonally1(matrix)
     diagonal2_product = find_diagonally2(matrix)
-    print(max(vertical_product, horizontal_product, diagonal1_product, diagonal2_product))
+    print(
+        max(vertical_product, horizontal_product, diagonal1_product, diagonal2_product)
+    )
     print(diagonal1_product)
+
 
 def find_vertical(matrix):
     max_product = 0
     for i in range(0, len(matrix) - 4):
         for j in range(0, len(matrix[0])):
-            if(matrix[i][j]*matrix[i+1][j]*matrix[i+2][j]*matrix[i+3][j] > max_product):
-                max_product = matrix[i][j]*matrix[i+1][j]*matrix[i+2][j]*matrix[i+3][j]
+            if (
+                matrix[i][j] * matrix[i + 1][j] * matrix[i + 2][j] * matrix[i + 3][j]
+                > max_product
+            ):
+                max_product = (
+                    matrix[i][j]
+                    * matrix[i + 1][j]
+                    * matrix[i + 2][j]
+                    * matrix[i + 3][j]
+                )
 
     return max_product
+
 
 def find_horizontal(matrix):
     max_product = 0
     for i in range(0, len(matrix)):
         for j in range(0, len(matrix[i]) - 4):
-            if(matrix[i][j]*matrix[i][j+1]*matrix[i][j+2]*matrix[i][j+3] > max_product):
-                max_product = matrix[i][j]*matrix[i][j+1]*matrix[i][j+2]*matrix[i][j+3]
-        
+            if (
+                matrix[i][j] * matrix[i][j + 1] * matrix[i][j + 2] * matrix[i][j + 3]
+                > max_product
+            ):
+                max_product = (
+                    matrix[i][j]
+                    * matrix[i][j + 1]
+                    * matrix[i][j + 2]
+                    * matrix[i][j + 3]
+                )
+
     return max_product
+
 
 def find_diagonally1(matrix):
     max_product = 0
     for i in range(0, len(matrix) - 4):
         for j in range(0, len(matrix[i]) - 4):
-            if(matrix[i][j]*matrix[i+1][j+1]*matrix[i+2][j+2]*matrix[i+3][j+3] > max_product):
-                max_product = matrix[i][j]*matrix[i+1][j+1]*matrix[i+2][j+2]*matrix[i+3][j+3]
+            if (
+                matrix[i][j]
+                * matrix[i + 1][j + 1]
+                * matrix[i + 2][j + 2]
+                * matrix[i + 3][j + 3]
+                > max_product
+            ):
+                max_product = (
+                    matrix[i][j]
+                    * matrix[i + 1][j + 1]
+                    * matrix[i + 2][j + 2]
+                    * matrix[i + 3][j + 3]
+                )
 
     return max_product
+
 
 def find_diagonally2(matrix):
     max_product = 0
     for i in range(0, len(matrix) - 4):
         for j in range(3, len(matrix[i])):
-            if(matrix[i][j]*matrix[i+1][j-1]*matrix[i+2][j-2]*matrix[i+3][j-3] > max_product):
-                max_product = matrix[i][j]*matrix[i+1][j-1]*matrix[i+2][j-2]*matrix[i+3][j-3]
+            if (
+                matrix[i][j]
+                * matrix[i + 1][j - 1]
+                * matrix[i + 2][j - 2]
+                * matrix[i + 3][j - 3]
+                > max_product
+            ):
+                max_product = (
+                    matrix[i][j]
+                    * matrix[i + 1][j - 1]
+                    * matrix[i + 2][j - 2]
+                    * matrix[i + 3][j - 3]
+                )
 
     return max_product
 
-def grid_to_matrix(grid):
-    return [list(map(int,line.split())) for line in grid.splitlines()]    
 
-grid = '''\
+def grid_to_matrix(grid):
+    return [list(map(int, line.split())) for line in grid.splitlines()]
+
+
+grid = """\
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -69,10 +116,8 @@ grid = '''\
 04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36
 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
-01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48 '''
+01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48 """
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
-

@@ -1,5 +1,5 @@
-# Program finding the path with the biggest sum in a trianle. It works by
-# starting at the top of the triable and moving to adjacent numbers of the
+# Program finding the path with the biggest sum in a triangle. It works by
+# starting at the top of the triangle and moving to adjacent numbers of the
 # row below.
 
 
